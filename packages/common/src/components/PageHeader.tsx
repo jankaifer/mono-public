@@ -5,7 +5,7 @@ import { useSafeColorScheme } from "@/hooks";
 import { Anchor } from "@mantine/core";
 import Link from "next/link";
 
-export const PageHeader = () => {
+export const PageHeader = ({ title }: { title: React.ReactNode }) => {
   const colorSchema = useSafeColorScheme("light");
 
   return (
@@ -16,8 +16,7 @@ export const PageHeader = () => {
         className="text-4xl font-medium"
         c={colorSchema === "dark" ? "white" : "black"}
       >
-        <span>Jan Kaifer</span>
-        <span className="text-gray-400">'s web</span>
+        {title}
       </Anchor>
       <ColorSchemaSwitch />
     </header>
