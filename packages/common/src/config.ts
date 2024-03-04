@@ -1,4 +1,4 @@
 export const config = {
-  name: "Jan Kaifer",
-  email: "jan@kaifer.dev",
-};
+  name: 'Jan Kaifer',
+  email: 'jan@kaifer.dev',
+}

@@ -1,25 +1,22 @@
-"use client";
+'use client'
 
-import { useSafeColorScheme } from "@/hooks";
-import { ActionIcon, useMantineColorScheme } from "@mantine/core";
-import { IconMoon, IconSun } from "@tabler/icons-react";
+import { ActionIcon, useMantineColorScheme } from '@mantine/core'
+import { IconMoon, IconSun } from '@tabler/icons-react'
+
+import { useSafeColorScheme } from '@/hooks'
 
 export const ColorSchemaSwitch = () => {
-  const { setColorScheme } = useMantineColorScheme();
-  const colorSchema = useSafeColorScheme("light");
+  const { setColorScheme } = useMantineColorScheme()
+  const colorSchema = useSafeColorScheme('light')
 
   return (
     <ActionIcon
-      onClick={() => setColorScheme(colorSchema === "light" ? "dark" : "light")}
+      onClick={() => setColorScheme(colorSchema === 'light' ? 'dark' : 'light')}
       variant="default"
-      size="xl"
+      size="input-sm"
       aria-label="Toggle color scheme"
     >
-      {colorSchema === "light" ? (
-        <IconSun stroke={1.5} />
-      ) : (
-        <IconMoon stroke={1.5} />
-      )}
+      {colorSchema === 'light' ? <IconSun /> : <IconMoon />}
     </ActionIcon>
-  );
-};
+  )
+}
