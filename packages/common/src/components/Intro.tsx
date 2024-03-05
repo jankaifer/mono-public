@@ -13,7 +13,7 @@ export const Intro = ({
   imageAlt: string
 }) => {
   return (
-    <div className="p-4 pt-16">
+    <div className="p-4 pt-0 sm:pt-16">
       <div className="py-4 flex flex-col-reverse items-center justify-between gap-10 md:flex-row">
         <div>
           <Title>{title}</Title>
