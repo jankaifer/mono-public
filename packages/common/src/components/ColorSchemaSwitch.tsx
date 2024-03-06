@@ -16,7 +16,8 @@ export const ColorSchemaSwitch = () => {
       size="input-sm"
       aria-label="Toggle color scheme"
     >
-      {colorSchema === 'light' ? <IconSun /> : <IconMoon />}
+      <IconSun className="dark:hidden" />
+      <IconMoon className="hidden dark:!inline" />
     </ActionIcon>
   )
 }

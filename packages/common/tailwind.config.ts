@@ -5,5 +5,6 @@ const config: Config = {
   corePlugins: {
     preflight: false,
   },
+  darkMode: ['selector', '[data-mantine-color-scheme="dark"]'],
 }
 export default config
