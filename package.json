@@ -10,7 +10,8 @@
     "common": "pnpm --filter @jkaifer/common",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "casa:scan": "docker run -v .:/my-dir fluidattacks/cli:amd64 skims scan /my-dir"
   },
   "keywords": [],
   "author": "Jan Kaifer",
