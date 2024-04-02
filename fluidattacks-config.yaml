@@ -1,0 +1,16 @@
+namespace: My monorepo
+output:
+  file_path: ./fluid-attacks-results.csv
+  format: CSV
+working_dir: .
+language: EN
+sast:
+  include:
+    - .
+  exclude:
+    - glob(**/node_modules/**)
+sca:
+  include:
+    - .
+  exclude:
+    - glob(**/node_modules/**)
