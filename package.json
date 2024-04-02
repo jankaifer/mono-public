@@ -11,7 +11,7 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "prepare": "husky install",
-    "casa:scan": "docker run -v .:/my-dir fluidattacks/cli:amd64 skims scan /my-dir/fluidattacks-config.yaml"
+    "casa:scan": "docker run -v \"$(pwd)\":/src fluidattacks/cli:amd64 skims scan /src/fluidattacks-config.yaml"
   },
   "keywords": [],
   "author": "Jan Kaifer",
