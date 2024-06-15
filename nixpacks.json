@@ -1,5 +1,0 @@
-{
-    "phases": {
-        "setup": ["...", "nodePackages_latest.pnpm"]
-    }   
-}
