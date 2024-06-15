@@ -1,0 +1,3 @@
+# NX is stupid and it was parsing these gitignored jsons and breaking
+# They should not be needed anyway
+**/.next/**/package.json
