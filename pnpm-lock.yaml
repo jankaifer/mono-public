@@ -72,9 +72,6 @@ importers:
       '@types/node': 20.14.2
       '@types/react': 18.3.3
       '@types/react-dom': 18.3.0
-      '@vercel/analytics': 1.3.1
-      '@vercel/postgres': 0.8.0
-      '@vercel/speed-insights': 1.0.12
       autoprefixer: 10.4.19
       dayjs: 1.11.11
       drizzle-kit: 0.22.7
@@ -90,6 +87,7 @@ importers:
       postcss: 8.4.38
       postcss-preset-mantine: 1.15.0
       postcss-simple-vars: 7.0.1
+      postgres: ^3.4.4
       react: 18.3.1
       react-dom: 18.3.1
       recharts: 2.12.7
@@ -121,11 +119,8 @@ importers:
       '@tiptap/extension-link': 2.4.0
       '@tiptap/react': 2.4.0_nnrd3gsncyragczmpvfhocinkq
       '@tiptap/starter-kit': 2.4.0
-      '@vercel/analytics': 1.3.1_next@14.2.4+react@18.3.1
-      '@vercel/postgres': 0.8.0
-      '@vercel/speed-insights': 1.0.12_next@14.2.4+react@18.3.1
       dayjs: 1.11.11
-      drizzle-orm: 0.31.2_evxyew63vbva66rctzdvs6f7su
+      drizzle-orm: 0.31.2_uwdsfttuc2wb3pabxnyv2xuxga
       embla-carousel-react: 8.1.5_react@18.3.1
       fastq: 1.17.1
       googleapis: 140.0.0
@@ -135,6 +130,7 @@ importers:
       pg: 8.12.0
       postcss-preset-mantine: 1.15.0_postcss@8.4.38
       postcss-simple-vars: 7.0.1_postcss@8.4.38
+      postgres: 3.4.4
       react: 18.3.1
       react-dom: 18.3.1_react@18.3.1
       recharts: 2.12.7_nnrd3gsncyragczmpvfhocinkq
@@ -166,8 +162,6 @@ importers:
       '@types/node': ^20
       '@types/react': ^18
       '@types/react-dom': ^18
-      '@vercel/analytics': ^1.2.2
-      '@vercel/speed-insights': ^1.0.10
       autoprefixer: ^10.0.1
       crypto-js: ^4.2.0
       eslint-config-next: 14.1.1
@@ -185,8 +179,6 @@ importers:
       '@mantine/form': 7.10.2_react@18.3.1
       '@mantine/hooks': 7.10.2_react@18.3.1
       '@tabler/icons-react': 2.47.0_react@18.3.1
-      '@vercel/analytics': 1.3.1_next@14.1.1+react@18.3.1
-      '@vercel/speed-insights': 1.0.12_next@14.1.1+react@18.3.1
       crypto-js: 4.2.0
       next: 14.1.1_nnrd3gsncyragczmpvfhocinkq
       react: 18.3.1
@@ -3190,12 +3182,6 @@ packages:
     resolution: {integrity: sha512-9b8mPpKrfeGRuhFH5iO1iwCLeIIsV6+H1sRfxbkoGXIyQE2BTsPd9zqSqQJ+pv5sJ/hT5M1zvOFL02MnEezFug==}
     dev: true
 
-  /@neondatabase/serverless/0.7.2:
-    resolution: {integrity: sha512-wU3WA2uTyNO7wjPs3Mg0G01jztAxUxzd9/mskMmtPwPTjf7JKWi9AW5/puOGXLxmZ9PVgRFeBVRVYq5nBPhsCg==}
-    dependencies:
-      '@types/pg': 8.6.6
-    dev: false
-
   /@next/env/14.1.1:
     resolution: {integrity: sha512-7CnQyD5G8shHxQIIg3c7/pSeYFeMhsNbpU/bmvH7ZnDql7mNRgg8O2JZrhrc/soFnfBnKP4/xXNiiSIPn2w8gA==}
     dev: false
@@ -4949,18 +4935,11 @@ packages:
     resolution: {integrity: sha512-xyu6WAMVwv6AKFLB+e/7ySZVr/0zLCzOa7rSpq6jNwpqOrUbcACDWC+53d4n2QHOnDou0fbIsg8wZu/sxrnI4Q==}
     dependencies:
       undici-types: 5.26.5
+    dev: true
 
   /@types/parse-json/4.0.2:
     resolution: {integrity: sha512-dISoDXWWQwUquiKsyZ4Ng+HX2KsPL7LyHKHQwgGFEA3IaKac4Obd+h2a/a6waisAoepJlBcx9paWqjA8/HVjCw==}
     dev: true
-
-  /@types/pg/8.6.6:
-    resolution: {integrity: sha512-O2xNmXebtwVekJDD+02udOncjVcMZQuTEQEMpKJ0ZRf5E7/9JJX3izhKUcUifBkyKpljyUM6BTgy2trmviKlpw==}
-    dependencies:
-      '@types/node': 20.14.2
-      pg-protocol: 1.6.1
-      pg-types: 2.2.0
-    dev: false
 
   /@types/prop-types/15.7.12:
     resolution: {integrity: sha512-5zvhXYtRNRluoE/jAp4GVsSduVUzNWKkOZrCDBWYtE7biZywwdC2AcEzg+cSMLFRfVgeAFqpfNabiPjxFddV1Q==}
@@ -5284,104 +5263,6 @@ packages:
   /@ungap/structured-clone/1.2.0:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
-
-  /@vercel/analytics/1.3.1_next@14.1.1+react@18.3.1:
-    resolution: {integrity: sha512-xhSlYgAuJ6Q4WQGkzYTLmXwhYl39sWjoMA3nHxfkvG+WdBT25c563a7QhwwKivEOZtPJXifYHR1m2ihoisbWyA==}
-    peerDependencies:
-      next: '>= 13'
-      react: ^18 || ^19
-    peerDependenciesMeta:
-      next:
-        optional: true
-      react:
-        optional: true
-    dependencies:
-      next: 14.1.1_nnrd3gsncyragczmpvfhocinkq
-      react: 18.3.1
-      server-only: 0.0.1
-    dev: false
-
-  /@vercel/analytics/1.3.1_next@14.2.4+react@18.3.1:
-    resolution: {integrity: sha512-xhSlYgAuJ6Q4WQGkzYTLmXwhYl39sWjoMA3nHxfkvG+WdBT25c563a7QhwwKivEOZtPJXifYHR1m2ihoisbWyA==}
-    peerDependencies:
-      next: '>= 13'
-      react: ^18 || ^19
-    peerDependenciesMeta:
-      next:
-        optional: true
-      react:
-        optional: true
-    dependencies:
-      next: 14.2.4_nnrd3gsncyragczmpvfhocinkq
-      react: 18.3.1
-      server-only: 0.0.1
-    dev: false
-
-  /@vercel/postgres/0.8.0:
-    resolution: {integrity: sha512-/QUV9ExwaNdKooRjOQqvrKNVnRvsaXeukPNI5DB1ovUTesglfR/fparw7ngo1KUWWKIVpEj2TRrA+ObRHRdaLg==}
-    engines: {node: '>=14.6'}
-    dependencies:
-      '@neondatabase/serverless': 0.7.2
-      bufferutil: 4.0.8
-      utf-8-validate: 6.0.3
-      ws: 8.14.2_nn4cfacdngcg7bs47xs3zpla7u
-    dev: false
-
-  /@vercel/speed-insights/1.0.12_next@14.1.1+react@18.3.1:
-    resolution: {integrity: sha512-ZGQ+a7bcfWJD2VYEp2R1LHvRAMyyaFBYytZXsfnbOMkeOvzGNVxUL7aVUvisIrTZjXTSsxG45DKX7yiw6nq2Jw==}
-    requiresBuild: true
-    peerDependencies:
-      '@sveltejs/kit': ^1 || ^2
-      next: '>= 13'
-      react: ^18 || ^19
-      svelte: ^4
-      vue: ^3
-      vue-router: ^4
-    peerDependenciesMeta:
-      '@sveltejs/kit':
-        optional: true
-      next:
-        optional: true
-      react:
-        optional: true
-      svelte:
-        optional: true
-      vue:
-        optional: true
-      vue-router:
-        optional: true
-    dependencies:
-      next: 14.1.1_nnrd3gsncyragczmpvfhocinkq
-      react: 18.3.1
-    dev: false
-
-  /@vercel/speed-insights/1.0.12_next@14.2.4+react@18.3.1:
-    resolution: {integrity: sha512-ZGQ+a7bcfWJD2VYEp2R1LHvRAMyyaFBYytZXsfnbOMkeOvzGNVxUL7aVUvisIrTZjXTSsxG45DKX7yiw6nq2Jw==}
-    requiresBuild: true
-    peerDependencies:
-      '@sveltejs/kit': ^1 || ^2
-      next: '>= 13'
-      react: ^18 || ^19
-      svelte: ^4
-      vue: ^3
-      vue-router: ^4
-    peerDependenciesMeta:
-      '@sveltejs/kit':
-        optional: true
-      next:
-        optional: true
-      react:
-        optional: true
-      svelte:
-        optional: true
-      vue:
-        optional: true
-      vue-router:
-        optional: true
-    dependencies:
-      next: 14.2.4_nnrd3gsncyragczmpvfhocinkq
-      react: 18.3.1
-    dev: false
 
   /@vitejs/plugin-react/4.3.1_vite@5.3.1:
     resolution: {integrity: sha512-m/V2syj5CuVnaxcUJOQRel/Wr31FFXRFlnOoq1TVtkCxsY5veGMTEmpWHndrhB2U8ScHtCQB1e+4hWYExQc6Lg==}
@@ -6202,14 +6083,6 @@ packages:
       base64-js: 1.5.1
       ieee754: 1.2.1
     dev: true
-
-  /bufferutil/4.0.8:
-    resolution: {integrity: sha512-4T53u4PdgsXqKaIctwF8ifXlRTTmEPJ8iEPWFdGZvcf7sbwYo6FKFEX9eNNAnzFZ7EzJAQ3CJeOtCRA4rDp7Pw==}
-    engines: {node: '>=6.14.2'}
-    requiresBuild: true
-    dependencies:
-      node-gyp-build: 4.8.1
-    dev: false
 
   /busboy/1.6.0:
     resolution: {integrity: sha512-8SFQbg/0hQ9xy3UNTB0YEnsNBbWfhf7RtnzpL7TkBiTBRfrQ9Fxcnz7VJsleJpyp6rVLvXiuORqjlHi5q+PYuA==}
@@ -7225,7 +7098,7 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm/0.31.2_evxyew63vbva66rctzdvs6f7su:
+  /drizzle-orm/0.31.2_uwdsfttuc2wb3pabxnyv2xuxga:
     resolution: {integrity: sha512-QnenevbnnAzmbNzQwbhklvIYrDE8YER8K7kSrAWQSV1YvFCdSQPzj+jzqRdTSsV2cDqSpQ0NXGyL1G9I43LDLg==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -7309,8 +7182,8 @@ packages:
         optional: true
     dependencies:
       '@types/react': 18.3.3
-      '@vercel/postgres': 0.8.0
       pg: 8.12.0
+      postgres: 3.4.4
       react: 18.3.1
     dev: false
 
@@ -10179,11 +10052,6 @@ packages:
     engines: {node: '>= 6.13.0'}
     dev: true
 
-  /node-gyp-build/4.8.1:
-    resolution: {integrity: sha512-OSs33Z9yWr148JZcbZd5WiAXhh/n9z8TxQcdMhIOlpN9AhWpLfvVFO73+m77bBABQMaY9XSvIa+qk0jlI7Gcaw==}
-    hasBin: true
-    dev: false
-
   /node-machine-id/1.1.12:
     resolution: {integrity: sha512-QNABxbrPa3qEIfrE6GOJ7BYIuignnJw7iQ2YPbc3Nla1HzRJjXzZOiikfF8m7eAMfichLt3M4VgLOetqgDmgGQ==}
     dev: true
@@ -11170,6 +11038,11 @@ packages:
       xtend: 4.0.2
     dev: false
 
+  /postgres/3.4.4:
+    resolution: {integrity: sha512-IbyN+9KslkqcXa8AO9fxpk97PA4pzewvpi2B3Dwy9u4zpV32QicaEdgmF3eSQUzdRk7ttDHQejNgAEr4XoeH4A==}
+    engines: {node: '>=12'}
+    dev: false
+
   /preact-render-to-string/5.2.3_preact@10.11.3:
     resolution: {integrity: sha512-aPDxUn5o3GhWdtJtW0svRC2SS/l8D9MAgo2+AWml+BhDImb27ALf04Q2d+AHqUUOc6RdSXFIBVa2gxzgMKgtZA==}
     peerDependencies:
@@ -11875,10 +11748,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
-
-  /server-only/0.0.1:
-    resolution: {integrity: sha512-qepMx2JxAa5jjfzxG79yPPq+8BuFToHd1hm7kI+Z4zAq1ftQiP7HcxMhDDItrbtwVeLg/cY2JnKnrcFkmiswNA==}
-    dev: false
 
   /set-function-length/1.2.2:
     resolution: {integrity: sha512-pgRc4hJ4/sNjWCSS9AmnS40x3bNMDTknHgL5UaMBTMyJnU90EgWh1Rz+MC9eFu4BuN/UwZjKQuY/1v3rM7HMfg==}
@@ -12811,6 +12680,7 @@ packages:
 
   /undici-types/5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+    dev: true
 
   /unicode-canonical-property-names-ecmascript/2.0.0:
     resolution: {integrity: sha512-yY5PpDlfVIU5+y/BSCxAJRBIS1Zc2dDG3Ujq+sR0U+JjUevW2JhocOF+soROYDSaAezOzOKuyyixhD6mBknSmQ==}
@@ -12959,14 +12829,6 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       react: 18.3.1
-    dev: false
-
-  /utf-8-validate/6.0.3:
-    resolution: {integrity: sha512-uIuGf9TWQ/y+0Lp+KGZCMuJWc3N9BHA+l/UmHd/oUHwJJDeysyTRxNQVkbzsIWfGFbRe3OcgML/i0mvVRPOyDA==}
-    engines: {node: '>=6.14.2'}
-    requiresBuild: true
-    dependencies:
-      node-gyp-build: 4.8.1
     dev: false
 
   /util-deprecate/1.0.2:
@@ -13471,22 +13333,6 @@ packages:
   /wrappy/1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
     dev: true
-
-  /ws/8.14.2_nn4cfacdngcg7bs47xs3zpla7u:
-    resolution: {integrity: sha512-wEBG1ftX4jcglPxgFCMJmZ2PLtSbJ2Peg6TmpJFTbe9GZYOQCDPdMYu/Tm0/bGZkw8paZnJY45J4K2PZrLYq8g==}
-    engines: {node: '>=10.0.0'}
-    peerDependencies:
-      bufferutil: ^4.0.1
-      utf-8-validate: '>=5.0.2'
-    peerDependenciesMeta:
-      bufferutil:
-        optional: true
-      utf-8-validate:
-        optional: true
-    dependencies:
-      bufferutil: 4.0.8
-      utf-8-validate: 6.0.3
-    dev: false
 
   /ws/8.17.0:
     resolution: {integrity: sha512-uJq6108EgZMAl20KagGkzCKfMEjxmKvZHG7Tlq0Z6nOky7YF7aq4mOx6xK8TJ/i1LeK4Qus7INktacctDgY8Ow==}
