@@ -130,4 +130,5 @@ dist
 .pnp.*
 
 .nx/cache
+.nx/workspace-data
 fluid-attacks-results.csv
