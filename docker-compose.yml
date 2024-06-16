@@ -4,18 +4,6 @@ x-environment: &default-environment
   POSTGRES_DB: postgres
 
 services:
-  app:
-    build:
-      context: ..
-      dockerfile: .devcontainer/Dockerfile
-    environment:
-      <<: *default-environment
-      PORT: 3000
-    ports:
-      - 3000:3000
-    volumes:
-      - ..:/workspace
-    command: sleep infinity
   db:
     image: 'postgres:16'
     container_name: 'postgres'
