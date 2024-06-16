@@ -1,12 +1,24 @@
-FROM mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm
+FROM node:20.14.0-slim
 
-# [Optional] Uncomment this section to install additional OS packages.
-# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
+ARG USERNAME=vscode
+ARG USER_UID=1000
+ARG USER_GID=$USER_UID
 
-# [Optional] Uncomment if you want to install an additional version of node using nvm
-# ARG EXTRA_NODE_VERSION=10
-# RUN su node -c "source /usr/local/share/nvm/nvm.sh && nvm install ${EXTRA_NODE_VERSION}"
+# Ensure apt is in non-interactive to avoid prompts
+ENV DEBIAN_FRONTEND=noninteractive
 
-# [Optional] Uncomment if you want to install more global node modules
-# RUN su node -c "npm install -g <your-package-list-here>"
+# Install dependencies.
+RUN apt-get -y update --no-install-recommends \
+    && apt-get -y install --no-install-recommends \
+    git \
+    vim \
+    && apt-get autoremove -y \
+    && apt-get clean -y
+
+# Create the user.
+RUN groupadd --gid $USER_GID $USERNAME \
+    && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME
+
+ENV DEBIAN_FRONTEND=dialog
+
+USER $USERNAME
