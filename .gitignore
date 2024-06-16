@@ -131,3 +131,5 @@ dist
 .nx/cache
 .nx/workspace-data
 fluid-attacks-results.csv
+
+.pnpm-store

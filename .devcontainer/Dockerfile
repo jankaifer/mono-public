@@ -18,6 +18,15 @@ RUN apt-get -y install --no-install-recommends \
     openssh-client
 RUN apt-get autoremove -y && apt-get clean -y
 
+# ENV SHELL="bash"
+# ENV PNPM_HOME="/pnpm"
+# ENV PATH="${PATH}:${PNPM_HOME}"
+
+# RUN mkdir "${PNPM_HOME}" && chown "${USER_UID}:${USER_GID}" "${PNPM_HOME}"
+
+# RUN npx pnpm i -g pnpm@latest
+RUN corepack enable
+
 RUN curl -fsSL https://get.docker.com | sh
 
 # Delet node user: https://github.com/nodejs/docker-node/issues/289#issuecomment-272206181
