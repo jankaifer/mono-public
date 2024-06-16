@@ -8,7 +8,11 @@
   "customizations": {
     "extensions": [],
     "vscode": {
-      "extensions": ["ms-azuretools.vscode-docker", "esbenp.prettier-vscode"],
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "esbenp.prettier-vscode",
+        "eamodio.gitlens"
+      ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "bash",
         "terminal.integrated.profiles.linux": {
