@@ -2997,7 +2997,7 @@ packages:
       react-number-format: 5.4.0_nnrd3gsncyragczmpvfhocinkq
       react-remove-scroll: 2.5.10_3vdbhqr2ncalcx7opnshezpx3q
       react-textarea-autosize: 8.5.3_3vdbhqr2ncalcx7opnshezpx3q
-      type-fest: 4.20.1
+      type-fest: 4.20.0
     transitivePeerDependencies:
       - '@types/react'
     dev: false
@@ -3395,7 +3395,6 @@ packages:
     dependencies:
       '@nx/js': 19.3.0_nx@19.3.0
     transitivePeerDependencies:
-      - '@babel/traverse'
       - '@swc-node/register'
       - '@swc/core'
       - '@swc/wasm'
@@ -3412,7 +3411,6 @@ packages:
     dependencies:
       '@nx/js': 19.3.0_nx@19.3.0+typescript@5.4.5
     transitivePeerDependencies:
-      - '@babel/traverse'
       - '@swc-node/register'
       - '@swc/core'
       - '@swc/wasm'
@@ -3430,7 +3428,6 @@ packages:
       '@nx/next': 19.3.0_eslint@8.56.0+nx@19.3.0
     transitivePeerDependencies:
       - '@babel/core'
-      - '@babel/traverse'
       - '@parcel/css'
       - '@rspack/core'
       - '@swc-node/register'
@@ -3467,7 +3464,6 @@ packages:
     dependencies:
       '@nx/react': 19.3.0_eslint@8.56.0+nx@19.3.0
     transitivePeerDependencies:
-      - '@babel/traverse'
       - '@swc-node/register'
       - '@swc/core'
       - '@swc/wasm'
@@ -3499,7 +3495,6 @@ packages:
     dependencies:
       '@nx/vite': 19.3.0_mphudc6vsp7sbud6hypdaeyzbe
     transitivePeerDependencies:
-      - '@babel/traverse'
       - '@swc-node/register'
       - '@swc/core'
       - '@swc/wasm'
@@ -3518,7 +3513,6 @@ packages:
     dependencies:
       '@nx/web': 19.3.0_nx@19.3.0
     transitivePeerDependencies:
-      - '@babel/traverse'
       - '@swc-node/register'
       - '@swc/core'
       - '@swc/wasm'
@@ -3535,7 +3529,6 @@ packages:
     dependencies:
       '@nx/webpack': 19.3.0_nx@19.3.0
     transitivePeerDependencies:
-      - '@babel/traverse'
       - '@parcel/css'
       - '@rspack/core'
       - '@swc-node/register'
@@ -3607,7 +3600,6 @@ packages:
       tslib: 2.6.3
       typescript: 5.4.5
     transitivePeerDependencies:
-      - '@babel/traverse'
       - '@swc-node/register'
       - '@swc/core'
       - '@swc/wasm'
@@ -3638,7 +3630,7 @@ packages:
       '@nx/workspace': 19.3.0
       babel-plugin-const-enum: 1.2.0_@babel+core@7.24.7
       babel-plugin-macros: 2.8.0
-      babel-plugin-transform-typescript-metadata: 0.3.2_@babel+core@7.24.7
+      babel-plugin-transform-typescript-metadata: 0.3.2
       chalk: 4.1.2
       columnify: 1.6.0
       detect-port: 1.6.1
@@ -3656,7 +3648,6 @@ packages:
       tsconfig-paths: 4.2.0
       tslib: 2.6.3
     transitivePeerDependencies:
-      - '@babel/traverse'
       - '@swc-node/register'
       - '@swc/core'
       - '@swc/wasm'
@@ -3687,7 +3678,7 @@ packages:
       '@nx/workspace': 19.3.0
       babel-plugin-const-enum: 1.2.0_@babel+core@7.24.7
       babel-plugin-macros: 2.8.0
-      babel-plugin-transform-typescript-metadata: 0.3.2_@babel+core@7.24.7
+      babel-plugin-transform-typescript-metadata: 0.3.2
       chalk: 4.1.2
       columnify: 1.6.0
       detect-port: 1.6.1
@@ -3705,7 +3696,6 @@ packages:
       tsconfig-paths: 4.2.0
       tslib: 2.6.3
     transitivePeerDependencies:
-      - '@babel/traverse'
       - '@swc-node/register'
       - '@swc/core'
       - '@swc/wasm'
@@ -3721,7 +3711,6 @@ packages:
     dependencies:
       '@nx/eslint': 19.3.0_eslint@8.56.0+nx@19.3.0
     transitivePeerDependencies:
-      - '@babel/traverse'
       - '@swc-node/register'
       - '@swc/core'
       - '@swc/wasm'
@@ -3759,7 +3748,6 @@ packages:
       webpack-merge: 5.10.0
     transitivePeerDependencies:
       - '@babel/core'
-      - '@babel/traverse'
       - '@parcel/css'
       - '@rspack/core'
       - '@swc-node/register'
@@ -3895,7 +3883,6 @@ packages:
       minimatch: 9.0.3
       tslib: 2.6.3
     transitivePeerDependencies:
-      - '@babel/traverse'
       - '@swc-node/register'
       - '@swc/core'
       - '@swc/wasm'
@@ -3926,7 +3913,6 @@ packages:
       vite: 5.3.1
       vitest: 1.6.0_@vitest+ui@1.6.0
     transitivePeerDependencies:
-      - '@babel/traverse'
       - '@swc-node/register'
       - '@swc/core'
       - '@swc/wasm'
@@ -3949,7 +3935,6 @@ packages:
       http-server: 14.1.1
       tslib: 2.6.3
     transitivePeerDependencies:
-      - '@babel/traverse'
       - '@swc-node/register'
       - '@swc/core'
       - '@swc/wasm'
@@ -4002,7 +3987,6 @@ packages:
       webpack-node-externals: 3.0.0
       webpack-subresource-integrity: 5.1.0_webpack@5.92.0
     transitivePeerDependencies:
-      - '@babel/traverse'
       - '@parcel/css'
       - '@rspack/core'
       - '@swc-node/register'
@@ -5873,7 +5857,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.23.1
-      caniuse-lite: 1.0.30001635
+      caniuse-lite: 1.0.30001634
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.1
@@ -5979,16 +5963,9 @@ packages:
       - supports-color
     dev: true
 
-  /babel-plugin-transform-typescript-metadata/0.3.2_@babel+core@7.24.7:
+  /babel-plugin-transform-typescript-metadata/0.3.2:
     resolution: {integrity: sha512-mWEvCQTgXQf48yDqgN7CH50waTyYBeP2Lpqx4nNWab9sxEpdXVeKgfj1qYI2/TgUPQtNFZ85i3PemRtnXVYYJg==}
-    peerDependencies:
-      '@babel/core': ^7
-      '@babel/traverse': ^7
-    peerDependenciesMeta:
-      '@babel/traverse':
-        optional: true
     dependencies:
-      '@babel/core': 7.24.7
       '@babel/helper-plugin-utils': 7.24.7
     dev: true
 
@@ -6086,7 +6063,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001635
+      caniuse-lite: 1.0.30001634
       electron-to-chromium: 1.4.803
       node-releases: 2.0.14
       update-browserslist-db: 1.0.16_browserslist@4.23.1
@@ -6157,13 +6134,13 @@ packages:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
       browserslist: 4.23.1
-      caniuse-lite: 1.0.30001635
+      caniuse-lite: 1.0.30001634
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: true
 
-  /caniuse-lite/1.0.30001635:
-    resolution: {integrity: sha512-34NOwyGFZxFoIOFNoLPP08eHzaCN+3wJFKx4Vph0XpidU1tRxB0p3Q2etIbOj0W8TYeuXkYsMCcyjV1+phBzxQ==}
+  /caniuse-lite/1.0.30001634:
+    resolution: {integrity: sha512-fbBYXQ9q3+yp1q1gBk86tOFs4pyn/yxFm5ZNP18OXJDfA3txImOY9PhfxVggZ4vRHDqoU8NrKU81eN0OtzOgRA==}
 
   /chai/4.4.1:
     resolution: {integrity: sha512-13sOfMv2+DWduEU+/xbun3LScLoqN17nBeTLUsmDfKdoiC1fr0n9PU4guu4AhRcOVFk/sW8LyZWHuhWtQZiF+g==}
@@ -9494,8 +9471,8 @@ packages:
       language-subtag-registry: 0.3.23
     dev: true
 
-  /launch-editor/2.7.0:
-    resolution: {integrity: sha512-KAc66u6LxWL8MifQ94oG3YGKYWDwz/Gi0T15lN//GaQoZe08vQGFJxrXkPAeu50UXgvJPPaRKVGuP1TRUm/aHQ==}
+  /launch-editor/2.6.1:
+    resolution: {integrity: sha512-eB/uXmFVpY4zezmGp5XtU21kwo7GBbKB+EQ+UZeWtGb9yAM5xt/Evk+lYH3eRNAtId+ej4u7TYPFZ07w4s7rRw==}
     dependencies:
       picocolors: 1.0.1
       shell-quote: 1.8.1
@@ -9984,7 +9961,7 @@ packages:
       '@next/env': 14.1.1
       '@swc/helpers': 0.5.2
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001635
+      caniuse-lite: 1.0.30001634
       graceful-fs: 4.2.11
       postcss: 8.4.31
       react: 18.3.1
@@ -10026,7 +10003,7 @@ packages:
       '@next/env': 14.2.4
       '@swc/helpers': 0.5.5
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001635
+      caniuse-lite: 1.0.30001634
       graceful-fs: 4.2.11
       postcss: 8.4.31
       react: 18.3.1
@@ -12616,8 +12593,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /type-fest/4.20.1:
-    resolution: {integrity: sha512-R6wDsVsoS9xYOpy8vgeBlqpdOyzJ12HNfQhC/aAKWM3YoCV9TtunJzh/QpkMgeDhkoynDcw5f1y+qF9yc/HHyg==}
+  /type-fest/4.20.0:
+    resolution: {integrity: sha512-MBh+PHUHHisjXf4tlx0CFWoMdjx8zCMLJHOjnV1prABYZFHqtFOyauCIK2/7w4oIfwkF8iNhLtnJEfVY2vn3iw==}
     engines: {node: '>=16'}
     dev: false
 
@@ -13140,7 +13117,7 @@ packages:
       html-entities: 2.5.2
       http-proxy-middleware: 2.0.6_@types+express@4.17.21
       ipaddr.js: 2.2.0
-      launch-editor: 2.7.0
+      launch-editor: 2.6.1
       open: 8.4.2
       p-retry: 4.6.2
       rimraf: 3.0.2
@@ -13151,7 +13128,7 @@ packages:
       spdy: 4.0.2
       webpack: 5.92.0
       webpack-dev-middleware: 5.3.4_webpack@5.92.0
-      ws: 8.17.1
+      ws: 8.17.0
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -13357,8 +13334,8 @@ packages:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
     dev: true
 
-  /ws/8.17.1:
-    resolution: {integrity: sha512-6XQFvXTkbfUOZOKKILFG1PDK2NDQs4azKQl26T0YS5CxqWLgXajbPZ+h4gZekJyRqFU8pvnbAbbs/3TgRPy+GQ==}
+  /ws/8.17.0:
+    resolution: {integrity: sha512-uJq6108EgZMAl20KagGkzCKfMEjxmKvZHG7Tlq0Z6nOky7YF7aq4mOx6xK8TJ/i1LeK4Qus7INktacctDgY8Ow==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
