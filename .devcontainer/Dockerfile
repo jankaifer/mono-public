@@ -20,6 +20,14 @@ RUN apt-get autoremove -y && apt-get clean -y
 
 RUN curl -fsSL https://get.docker.com | sh
 
+ENV SHELL="bash"
+ENV PNPM_HOME="/pnpm"
+ENV PATH="${PATH}:${PNPM_HOME}"
+
+RUN mkdir "${PNPM_HOME}" && chown "${USER_UID}:${USER_GID}" "${PNPM_HOME}"
+
+RUN npx pnpm i -g pnpm@7.27.0
+
 # Delet node user: https://github.com/nodejs/docker-node/issues/289#issuecomment-272206181
 RUN userdel -r node
 
