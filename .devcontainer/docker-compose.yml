@@ -17,7 +17,8 @@ services:
       - ..:/workspace
     command: sleep infinity
   db:
-    image: 'postgres:12'
+    image: 'postgres:16'
+    container_name: 'postgres'
     restart: unless-stopped
     environment: *default-environment
     ports:
@@ -25,14 +26,14 @@ services:
     volumes:
       - ./postgres-data:/var/lib/postgresql/data
   pgadmin:
-    image: dpage/pgadmin4
+    image: dpage/pgadmin4:8.8
+    container_name: 'pgadmin'
     restart: unless-stopped
     environment:
       <<: *default-environment
-      PORT: 8080
       PGADMIN_DEFAULT_EMAIL: jan@kaifer.cz
       PGADMIN_DEFAULT_PASSWORD: admin
     ports:
-      - 8080:8080
+      - 3001:80
     volumes:
       - ./pgadmin-data:/var/lib/pgadmin
