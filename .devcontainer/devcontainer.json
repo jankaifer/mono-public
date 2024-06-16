@@ -8,7 +8,13 @@
   "customizations": {
     "extensions": [],
     "vscode": {
-      "extensions": ["ms-azuretools.vscode-docker", "esbenp.prettier-vscode"]
+      "extensions": ["ms-azuretools.vscode-docker", "esbenp.prettier-vscode"],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.profiles.linux": {
+          "bash": { "path": "/bin/bash" }
+        }
+      }
     }
   },
   "mounts": [
