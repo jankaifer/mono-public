@@ -22,7 +22,7 @@
   "engines": {
     "node": ">=18.16.1"
   },
-  "packageManager": "pnpm@9.3.0+sha512.ee7b93e0c2bd11409c6424f92b866f31d3ea1bef5fbe47d3c7500cdc3c9668833d2e55681ad66df5b640c61fa9dc25d546efa54d76d7f8bf54b13614ac293631",
+  "packageManager": "pnpm@7.33.7+sha512.7afe2410642b39c698df46da4ce5c7231a5cce360698d69f8cf8f42257d40b3e43f231053b07b8de849fd4ffbf4a71ff57b835137777a352388f3d3da747200e",
   "type": "module",
   "lint-staged": {
     "**/*.{js,ts,tsx}": [
