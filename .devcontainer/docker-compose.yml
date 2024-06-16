@@ -1,37 +1,66 @@
-version: '3.8'
+# version: '3.8'
+
+# services:
+#   app:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+
+#     # network_mode: service:db
+#     volumes:
+#       - ../..:/workspaces:cached
+
+#     command: sleep infinity
+
+# db:
+#   image: postgres:latest
+#   restart: unless-stopped
+#   # network_mode: service:app
+#   volumes:
+#     - postgres-data:/var/lib/postgresql/data
+#   environment:
+#     POSTGRES_PASSWORD: postgres
+#     POSTGRES_USER: postgres
+#     POSTGRES_DB: postgres
+
+# pgadmin:
+#   image: dpage/pgadmin4
+#   restart: unless-stopped
+#   network_mode: service:app
+#   environment:
+#     PGADMIN_DEFAULT_EMAIL: admin
+#     PGADMIN_DEFAULT_PASSWORD: admin
+#   volumes:
+#     - pgadmin-data:/var/lib/pgadmin
+# volumes:
+# postgres-data:
+# pgadmin-data:
+
+version: '3.7'
+
+x-environment: &default-environment
+  POSTGRES_USER: postgres
+  POSTGRES_PASSWORD: postgres
+  POSTGRES_DB: postgres
 
 services:
   app:
     build:
-      context: .
-      dockerfile: Dockerfile
-
-    # network_mode: service:db
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    environment:
+      <<: *default-environment
+      PORT: 3000
+    ports:
+      - 3000:3000
     volumes:
-      - ../..:/workspaces:cached
-
+      - ..:/workspace
     command: sleep infinity
-
-  # db:
-  #   image: postgres:latest
-  #   restart: unless-stopped
-  #   # network_mode: service:app
-  #   volumes:
-  #     - postgres-data:/var/lib/postgresql/data
-  #   environment:
-  #     POSTGRES_PASSWORD: postgres
-  #     POSTGRES_USER: postgres
-  #     POSTGRES_DB: postgres
-
-  # pgadmin:
-  #   image: dpage/pgadmin4
-  #   restart: unless-stopped
-  #   network_mode: service:app
-  #   environment:
-  #     PGADMIN_DEFAULT_EMAIL: admin
-  #     PGADMIN_DEFAULT_PASSWORD: admin
-  #   volumes:
-  #     - pgadmin-data:/var/lib/pgadmin
-# volumes:
-# postgres-data:
-# pgadmin-data:
+  db:
+    image: 'postgres:12'
+    restart: unless-stopped
+    environment: *default-environment
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
