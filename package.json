@@ -22,7 +22,7 @@
   "engines": {
     "node": ">=18.16.1"
   },
-  "packageManager": "pnpm@7.27.0",
+  "packageManager": "pnpm@9.4.0+sha256.b6fd0bfda555e7e584ad7e56b30c68b01d5a04f9ee93989f4b93ca8473c49c74",
   "type": "module",
   "lint-staged": {
     "**/*.{js,ts,tsx}": [
@@ -50,5 +50,24 @@
     "prettier": "3.3.2",
     "vite": "5.3.1",
     "vitest": "1.6.0"
+  },
+  "dependencies": {
+    "@mantine/carousel": "7.10.2",
+    "@mantine/charts": "7.10.2",
+    "@mantine/code-highlight": "7.10.2",
+    "@mantine/core": "7.10.2",
+    "@mantine/dates": "7.10.2",
+    "@mantine/dropzone": "7.10.2",
+    "@mantine/form": "7.10.2",
+    "@mantine/hooks": "7.10.2",
+    "@mantine/modals": "7.10.2",
+    "@mantine/notifications": "7.10.2",
+    "@mantine/nprogress": "7.10.2",
+    "@mantine/spotlight": "7.10.2",
+    "@mantine/tiptap": "7.10.2",
+    "@tabler/icons-react": "3.6.0",
+    "next": "14.2.4",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   }
 }
