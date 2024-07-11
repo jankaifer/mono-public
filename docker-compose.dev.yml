@@ -1,0 +1,27 @@
+x-environment: &default-environment
+  POSTGRES_USER: postgres
+  POSTGRES_PASSWORD: postgres
+  POSTGRES_DB: postgres
+
+services:
+  db:
+    image: 'postgres:16'
+    container_name: 'postgres'
+    restart: unless-stopped
+    environment: *default-environment
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+  pgadmin:
+    image: dpage/pgadmin4:8.8
+    container_name: 'pgadmin'
+    restart: unless-stopped
+    environment:
+      <<: *default-environment
+      PGADMIN_DEFAULT_EMAIL: jan@kaifer.cz
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - 3001:80
+    volumes:
+      - ./pgadmin-data:/var/lib/pgadmin
